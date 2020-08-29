@@ -6,6 +6,7 @@
 .wrap {
   max-width: 1024px;
   margin: 0 auto;
+  position: relative;
 }
 
 .header {
@@ -175,6 +176,7 @@
   -webkit-box-shadow: 0 0 0.3em 0.1em #dfdada;
           box-shadow: 0 0 0.3em 0.1em #dfdada;
   margin-bottom: 1.5em;
+  cursor: pointer;
 }
 
 .areadata .item:nth-child(odd) {
@@ -320,5 +322,12 @@
 
 .footer p:nth-child(2) {
   color: #FFD366;
+}
+
+.btn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
