@@ -49,10 +49,10 @@ window.onload = function () {
     );
 
     //search All data
-    function searchData(name) {
+    function searchData(x) {
         newData = [];
-        var str = [];
-        var name = name;
+        let str = [];
+        let name = x;
         thisPage = 0;
         removeStyle = 1;
         for (let i = 0; i < len; i++) {
