@@ -124,12 +124,12 @@ window.onload = function () {
     }
 
     //print data
-    function printNewData(i, j) {
+    function printNewData(x, y) {
         let printData = newData;
         let printlen = printData.length;
         let eleStr = "";
-        var i = i || 0;
-        var j = j || 10;
+        let i = x || 0;
+        let j = y || 10;
         thisPage = j;
         if (j > printlen) {
             j = printlen;
@@ -168,8 +168,8 @@ window.onload = function () {
     pageNumberID.addEventListener(
         "click",
         function (e) {
-            var i = 0;
-            var j = 0;
+            let i = 0;
+            let j = 0;
             if (e.target.nodeName !== "UL") {
                 if (e.target.dataset.num !== undefined) {
                     j = 10 * e.target.textContent;
@@ -193,8 +193,6 @@ window.onload = function () {
                 printNewData(i, j);
                 addStyle(e);
             }
-
-            console.log(e.target.nodeName);
         },
         false
     );
