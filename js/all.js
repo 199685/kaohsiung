@@ -23,8 +23,8 @@ xhr.onload = function () {
 
   //add選單選項
   function addSelect() {
-    var str = searchData(select.value);
-    var selectData = '<option value="請選擇">--請選擇行政區--</option>';
+    let str = searchData(select.value);
+    let selectData = '<option value="請選擇">--請選擇行政區--</option>';
     for (let i = 0; i < str[0]; i++) {
       selectData +=
         '<option value="' + str[1][i] + '">' + str[1][i] + '</option>';
@@ -36,7 +36,7 @@ xhr.onload = function () {
   hotarea.addEventListener(
     'click',
     function (e) {
-      if (e.target.nodeName == 'A') {
+      if (e.target.nodeName === 'A') {
         searchData(e.target.textContent);
       }
     },
@@ -59,14 +59,14 @@ xhr.onload = function () {
     thisPage = 0;
     removeStyle = 1;
     for (let i = 0; i < len; i++) {
-      if (data[i].Zone == name) {
+      if (data[i].Zone === name) {
         content.previousSibling.previousSibling.textContent = name;
         newData.push(data[i]);
-      } else if (name == '請選擇' || name == '') {
+      } else if (name === '請選擇' || name === '') {
         content.previousSibling.previousSibling.textContent = 'All';
         newData.push(data[i]);
       }
-      if (name == '' && str.indexOf(data[i].Zone) < 0) {
+      if (name === '' && str.indexOf(data[i].Zone) < 0) {
         str.push(data[i].Zone);
       }
     }
@@ -111,7 +111,7 @@ xhr.onload = function () {
         pageStyle[0].classList.remove('blue');
       }
       //next style
-      if (thisNumber == pageNumber) {
+      if (thisNumber === pageNumber) {
         pageStyle[pageStylelen - 1].classList.remove('blue');
       } else {
         pageStyle[pageStylelen - 1].classList.add('blue');
@@ -202,7 +202,7 @@ xhr.onload = function () {
 
   topicon.addEventListener(
     'click',
-    function (e) {
+    function () {
       window.scroll({
         top: 0,
         left: 0,
